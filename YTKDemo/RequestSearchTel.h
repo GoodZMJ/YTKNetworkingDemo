@@ -9,5 +9,10 @@
 #import "RequestBase.h"
 
 @interface RequestSearchTel : RequestBase
-@property (nonatomic, copy) NSString *tel;
+
+//@property (nonatomic, copy) NSString *tel;
+
+@property (nonatomic, copy) NSString *tel_local;
+
+@property (nonatomic, assign) NSInteger telNum; // 测试忽略
 @end

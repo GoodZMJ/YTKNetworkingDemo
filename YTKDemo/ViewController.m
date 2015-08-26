@@ -33,7 +33,10 @@
 {
     
     RequestSearchTel *requestBean = [[RequestSearchTel alloc] init];
-    requestBean.tel = _phoneTF.text;
+    requestBean.tel_local = _phoneTF.text;
+    
+    // 忽略测试
+    requestBean.telNum = 1008611;
     
     [requestBean startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
         

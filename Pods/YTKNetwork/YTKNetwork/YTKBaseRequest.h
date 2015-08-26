@@ -179,5 +179,21 @@ typedef void (^AFDownloadProgressBlock)(AFDownloadRequestOperation *operation, N
 /// 请求返回结果
 @property (nonatomic, strong, readonly) id responseBean;
 
+/**
+ *  忽略的参数列表
+ *
+ *  @return 忽略的参数列表
+ */
+- (NSArray *)ignoreArgumentNames;
+
+/**
+ *  重新修改请求参数名称
+ *
+ *  示例：{@“原来的参数名称”:@"服务器的请求参数名称"}
+ *
+ *  @return 参数名称映射字典
+ */
+- (NSDictionary *)configArguments;
+
 
 @end

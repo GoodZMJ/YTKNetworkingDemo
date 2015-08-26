@@ -15,7 +15,6 @@
 		DB3BD0001B7D98AC000452E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB3BCFFF1B7D98AC000452E9 /* Assets.xcassets */; };
 		DB3BD0031B7D98AC000452E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB3BD0011B7D98AC000452E9 /* LaunchScreen.storyboard */; };
 		DB3BD00E1B7D98AC000452E9 /* YTKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3BD00D1B7D98AC000452E9 /* YTKDemoTests.m */; };
-		DB3BD0191B7D98AC000452E9 /* YTKDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3BD0181B7D98AC000452E9 /* YTKDemoUITests.m */; };
 		DB3BD0281B7D9C77000452E9 /* RequestBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3BD0271B7D9C77000452E9 /* RequestBase.m */; };
 		DB3BD02B1B7D9C8C000452E9 /* ResponseBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3BD02A1B7D9C8C000452E9 /* ResponseBase.m */; };
 		DB3BD02E1B7D9CD9000452E9 /* RequestSearchTel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3BD02D1B7D9CD9000452E9 /* RequestSearchTel.m */; };
@@ -25,13 +24,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		DB3BD00A1B7D98AC000452E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DB3BCFE81B7D98AC000452E9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DB3BCFEF1B7D98AC000452E9;
-			remoteInfo = YTKDemo;
-		};
-		DB3BD0151B7D98AC000452E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DB3BCFE81B7D98AC000452E9 /* Project object */;
 			proxyType = 1;
@@ -56,7 +48,6 @@
 		DB3BD0091B7D98AC000452E9 /* YTKDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YTKDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3BD00D1B7D98AC000452E9 /* YTKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTKDemoTests.m; sourceTree = "<group>"; };
 		DB3BD00F1B7D98AC000452E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB3BD0141B7D98AC000452E9 /* YTKDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YTKDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3BD0181B7D98AC000452E9 /* YTKDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTKDemoUITests.m; sourceTree = "<group>"; };
 		DB3BD01A1B7D98AC000452E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB3BD0261B7D9C77000452E9 /* RequestBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestBase.h; sourceTree = "<group>"; };
@@ -88,13 +79,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB3BD0111B7D98AC000452E9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -115,7 +99,6 @@
 			children = (
 				DB3BCFF01B7D98AC000452E9 /* YTKDemo.app */,
 				DB3BD0091B7D98AC000452E9 /* YTKDemoTests.xctest */,
-				DB3BD0141B7D98AC000452E9 /* YTKDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,24 +212,6 @@
 			productReference = DB3BD0091B7D98AC000452E9 /* YTKDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DB3BD0131B7D98AC000452E9 /* YTKDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DB3BD0231B7D98AC000452E9 /* Build configuration list for PBXNativeTarget "YTKDemoUITests" */;
-			buildPhases = (
-				DB3BD0101B7D98AC000452E9 /* Sources */,
-				DB3BD0111B7D98AC000452E9 /* Frameworks */,
-				DB3BD0121B7D98AC000452E9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DB3BD0161B7D98AC000452E9 /* PBXTargetDependency */,
-			);
-			name = YTKDemoUITests;
-			productName = YTKDemoUITests;
-			productReference = DB3BD0141B7D98AC000452E9 /* YTKDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -260,10 +225,6 @@
 						CreatedOnToolsVersion = 7.0;
 					};
 					DB3BD0081B7D98AC000452E9 = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = DB3BCFEF1B7D98AC000452E9;
-					};
-					DB3BD0131B7D98AC000452E9 = {
 						CreatedOnToolsVersion = 7.0;
 						TestTargetID = DB3BCFEF1B7D98AC000452E9;
 					};
@@ -284,7 +245,6 @@
 			targets = (
 				DB3BCFEF1B7D98AC000452E9 /* YTKDemo */,
 				DB3BD0081B7D98AC000452E9 /* YTKDemoTests */,
-				DB3BD0131B7D98AC000452E9 /* YTKDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -301,13 +261,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DB3BD0071B7D98AC000452E9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DB3BD0121B7D98AC000452E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -373,14 +326,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB3BD0101B7D98AC000452E9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DB3BD0191B7D98AC000452E9 /* YTKDemoUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -388,11 +333,6 @@
 			isa = PBXTargetDependency;
 			target = DB3BCFEF1B7D98AC000452E9 /* YTKDemo */;
 			targetProxy = DB3BD00A1B7D98AC000452E9 /* PBXContainerItemProxy */;
-		};
-		DB3BD0161B7D98AC000452E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DB3BCFEF1B7D98AC000452E9 /* YTKDemo */;
-			targetProxy = DB3BD0151B7D98AC000452E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -501,7 +441,10 @@
 			baseConfigurationReference = F2205A11E9368B9393CB6861 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				INFOPLIST_FILE = YTKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aboo.YTKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -513,7 +456,10 @@
 			baseConfigurationReference = 387B21075E30069AE28945D2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				INFOPLIST_FILE = YTKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aboo.YTKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -544,30 +490,6 @@
 			};
 			name = Release;
 		};
-		DB3BD0241B7D98AC000452E9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = YTKDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aboo.YTKDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = YTKDemo;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		DB3BD0251B7D98AC000452E9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = YTKDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aboo.YTKDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = YTKDemo;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -594,15 +516,6 @@
 			buildConfigurations = (
 				DB3BD0211B7D98AC000452E9 /* Debug */,
 				DB3BD0221B7D98AC000452E9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DB3BD0231B7D98AC000452E9 /* Build configuration list for PBXNativeTarget "YTKDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DB3BD0241B7D98AC000452E9 /* Debug */,
-				DB3BD0251B7D98AC000452E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

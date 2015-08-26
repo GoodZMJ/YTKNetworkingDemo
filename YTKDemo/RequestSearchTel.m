@@ -14,4 +14,14 @@
     return @"/apistore/mobilephoneservice/mobilephone";
 }
 
+- (NSArray *)ignoreArgumentNames
+{
+    return @[@"telNum"];
+}
+
+- (NSDictionary *)configArguments
+{
+    return @{@"tel_local" : @"tel"};
+}
+
 @end

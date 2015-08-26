@@ -196,6 +196,9 @@
     }
 
     YTKLog(@"Add request: %@", NSStringFromClass([request class]));
+    YTKLog(@"URL: %@", url);
+    YTKLog(@"Params：%@", param);
+    
     [self addOperation:request];
 }
 
