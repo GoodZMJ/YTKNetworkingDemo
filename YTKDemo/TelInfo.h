@@ -10,8 +10,11 @@
 
 @interface TelInfo : NSObject
 
-@property (nonatomic, copy) NSString *telString;
+@property (nonatomic, copy) NSString *phone;
+@property (nonatomic, copy) NSString *prefix;
+@property (nonatomic, copy) NSString *supplier;
 @property (nonatomic, copy) NSString *province;
-@property (nonatomic, copy) NSString *carrier;
+@property (nonatomic, copy) NSString *city;
+@property (nonatomic, copy) NSString *suit;
 
 @end

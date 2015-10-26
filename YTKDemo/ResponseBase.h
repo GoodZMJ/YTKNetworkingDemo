@@ -10,5 +10,5 @@
 
 @interface ResponseBase : NSObject
 @property (nonatomic, assign) NSInteger errNum;
-@property (nonatomic, copy) NSString *errMsg;
+@property (nonatomic, copy) NSString *retMsg;
 @end

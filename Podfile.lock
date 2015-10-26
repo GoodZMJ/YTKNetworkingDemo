@@ -22,19 +22,16 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - MJExtension (2.5.6)
-  - YTKNetwork (0.5.0):
-    - AFDownloadRequestOperation (~> 2.0)
-    - AFNetworking (~> 2.0)
+  - MJExtension (2.5.14)
 
 DEPENDENCIES:
-  - MJExtension
-  - YTKNetwork
+  - AFDownloadRequestOperation (= 2.0.1)
+  - AFNetworking (= 2.5.4)
+  - MJExtension (= 2.5.14)
 
 SPEC CHECKSUMS:
   AFDownloadRequestOperation: 748a1643423e1ddb23f2178f778087d4f0ae8ac7
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
-  MJExtension: 5ea3e326162ccc07c60afe8cc36c936bba20d0d5
-  YTKNetwork: 3f163c181ce5f03d52cf88f39d6757f46894280c
+  MJExtension: fb8e6e900fb44c9a7be435ba3d72b7fdf5f0994c
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.39.0

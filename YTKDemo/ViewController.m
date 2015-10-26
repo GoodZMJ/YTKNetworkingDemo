@@ -44,7 +44,8 @@
         
         TelInfo *tel = response.retData;
         
-        NSString *result = [NSString stringWithFormat:@"手机号码： %@\n省份：%@\n运营商：%@", tel.telString, tel.province, tel.carrier];
+        NSLog(@"返回结果:%@", [tel description]);
+        NSString *result = [NSString stringWithFormat:@"手机号码： %@\n省份：%@\n运营商：%@\n城市：%@\n%@\n%@", tel.phone, tel.province, tel.supplier, tel.city, tel.suit, tel.prefix];
         
         _resultLabel.text = result;
         
