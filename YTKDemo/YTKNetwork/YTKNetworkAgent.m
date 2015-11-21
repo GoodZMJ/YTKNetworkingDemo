@@ -300,7 +300,7 @@
     NSString *url = [self buildRequestUrl:request];
     NSString *value = request.responseString;
     
-    YTKLog(@"\n=======end request success=======\n\nURL: %@\n\nResult: %@\n\n ======= end ======= \n", url, value);
+    YTKLog(@"\n=======end request success=======\n\nURL: %@\n\nResult:\n%@\n\n ======= end ======= \n", url, value);
 }
 
 - (void)handleRequestFailure:(YTKBaseRequest *)request
@@ -308,7 +308,7 @@
     NSString *url = [self buildRequestUrl:request];
     NSString *value = request.responseString;
     
-    YTKLog(@"\n=======end request failure=======\n\nURL: %@\n\nCode: %ld\n\nResult: %@\n\n ======= end ======= \n", url, (long)request.responseStatusCode,value);
+    YTKLog(@"\n=======end request failure=======\n\nURL: %@\n\nCode: %ld\n\nResult:\n%@\n\n ======= end ======= \n", url, (long)request.responseStatusCode,value);
 }
 
 @end
