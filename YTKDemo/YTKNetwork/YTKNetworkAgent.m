@@ -195,9 +195,11 @@
         }
     }
 
-    YTKLog(@"Add request: %@", NSStringFromClass([request class]));
-    YTKLog(@"URL: %@", url);
-    YTKLog(@"Params：%@", param);
+//    YTKLog(@"Add request: %@", NSStringFromClass([request class]));
+//    YTKLog(@"URL: %@", url);
+//    YTKLog(@"Params：%@", param);
+    
+    YTKLog(@"\n=======start request=======\n\nAdd request: %@\n\nURL: %@\n\nParams：%@\n\n ======= end ======= \n", NSStringFromClass([request class]), url, param);
     
     [self addOperation:request];
 }
@@ -232,7 +234,7 @@
 - (void)handleRequestResult:(AFHTTPRequestOperation *)operation {
     NSString *key = [self requestHashKey:operation];
     YTKBaseRequest *request = _requestsRecord[key];
-    YTKLog(@"Finished Request: %@", NSStringFromClass([request class]));
+//    YTKLog(@"Finished Request: %@", NSStringFromClass([request class]));
     if (request) {
         BOOL succeed = [self checkResult:request];
         if (succeed) {
@@ -245,6 +247,10 @@
                 request.successCompletionBlock(request);
             }
             [request toggleAccessoriesDidStopCallBack];
+            
+            // 额外处理逻辑
+            [self handleRequestSuccess:request];
+            
         } else {
             YTKLog(@"Request %@ failed, status code = %ld",
                      NSStringFromClass([request class]), (long)request.responseStatusCode);
@@ -257,6 +263,9 @@
                 request.failureCompletionBlock(request);
             }
             [request toggleAccessoriesDidStopCallBack];
+            
+            // 额外处理逻辑
+            [self handleRequestFailure:request];
         }
     }
     [self removeOperation:operation];
@@ -283,6 +292,23 @@
         [_requestsRecord removeObjectForKey:key];
     }
     YTKLog(@"Request queue size = %lu", (unsigned long)[_requestsRecord count]);
+}
+
+#pragma mark 额外处理网络请求结果
+- (void)handleRequestSuccess:(YTKBaseRequest *)request
+{
+    NSString *url = [self buildRequestUrl:request];
+    NSString *value = request.responseString;
+    
+    YTKLog(@"\n=======end request success=======\n\nURL: %@\n\nResult: %@\n\n ======= end ======= \n", url, value);
+}
+
+- (void)handleRequestFailure:(YTKBaseRequest *)request
+{
+    NSString *url = [self buildRequestUrl:request];
+    NSString *value = request.responseString;
+    
+    YTKLog(@"\n=======end request failure=======\n\nURL: %@\n\nCode: %ld\n\nResult: %@\n\n ======= end ======= \n", url, (long)request.responseStatusCode,value);
 }
 
 @end
