@@ -90,14 +90,16 @@
             }else{
                 changeKey = originalKey;
             }
-            
-            id value = objc_msgSend(self, sel_registerName(propName));
+
+            id value = [self valueForKey:originalKey];
             
             [params setObject:value forKey:changeKey];
             
         }
         
     }
+    
+    free(properties);
     
     return params;
 }
@@ -228,7 +230,7 @@
     
     NSString *values = self.responseString;
     
-    id response = objc_msgSend(objc_getClass(responseBeanName1), sel_registerName("objectWithKeyValues:"), values);
+    id response = objc_msgSend(objc_getClass(responseBeanName1), sel_registerName("mj_objectWithKeyValues:"), values);
     
     return response;
 }
