@@ -93,7 +93,9 @@
 
             id value = [self valueForKey:originalKey];
             
-            [params setObject:value forKey:changeKey];
+            if (value) {
+                [params setObject:value forKey:changeKey];
+            }
             
         }
         
